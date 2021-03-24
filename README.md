@@ -19,6 +19,11 @@
 > Ejecuta los ficheros de código fuente desde el programa principal (index.ts) que se traducen previamente a JavaScript y se depositan en el directorio dist desde donde son lanzados por Node.
 > NOTA: no se ha creado ningún programa principal.
 
-## Objetivos
 
-.
+**~$ npm run doc**
+
+> Genera documentación en base a los comentarios de cada fichero fuente mediante la herramienta [TypeDoc](https://typedoc.org/)
+## Enlaces  
+ - [Enlace al enunciado de la práctica](https://ull-esit-inf-dsi-2021.github.io/prct06-generics-solid/)  
+ - [Enlace a los apuntes sobre principios SOLID](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-solid.html)  
+ - [Enlace a los apuntes sobre conceptos avanzzados de tipos genéricos](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-advanced-generics.html)
