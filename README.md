@@ -4,6 +4,8 @@
     Escuela Superior de Ingeniería y Tecnología - ULL
     ~ 24-MAR-2021
 
+> Importante ejecutar `npm install` de antemano para instalar las posiles dependencias. 
+
 ## Scripts de NPM para este repostiorio
 
 **~$ npm run test**

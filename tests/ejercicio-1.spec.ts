@@ -2,7 +2,7 @@ import "mocha";
 import {expect} from "chai";
 import {Stats} from "../src/ejercicio-1/fighter";
 import {TypeEffectCalcule} from "../src/ejercicio-1/type-effect-calcule";
-import {Pokemon} from "../src/ejercicio-1/pokemon";
+import {PokemonFighter} from "../src/ejercicio-1/pokemon-fighter";
 
 describe("Type effect calcule in combat is nested in another class - Ex1", ()=>{
   it("When advantage input class sets as 2", ()=>{
@@ -55,7 +55,7 @@ describe("Testing abstract class Fighter for Pokemon - Ex1", () => {
       hp: 80};
 
     const elekid =
-      new Pokemon("Elekid", 0.4, 50, elekidStats, "Electric");
+      new PokemonFighter("Elekid", 0.4, 50, elekidStats, "Electric");
   it("A pokemon can be created and it's features accessed", () => {
     expect(elekid.name).to.be.eq("Elekid");
     expect(elekid.height).to.be.eq(0.4);
@@ -72,7 +72,7 @@ describe("Testing abstract class Fighter for Pokemon - Ex1", () => {
   });
   it("A default pokemon sets it's element to Normal", ()=>{
     const rattata =
-    new Pokemon("Rattata", 0.2, 15, elekidStats);
+    new PokemonFighter("Rattata", 0.2, 15, elekidStats);
     expect(rattata.name).to.be.eq("Rattata");
     expect(rattata.height).to.be.eq(0.2);
     expect(rattata.weight).to.be.eq(15);
