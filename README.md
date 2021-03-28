@@ -26,4 +26,8 @@
 ## Enlaces  
  - [Enlace al enunciado de la práctica](https://ull-esit-inf-dsi-2021.github.io/prct06-generics-solid/)  
  - [Enlace a los apuntes sobre principios SOLID](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-solid.html)  
- - [Enlace a los apuntes sobre conceptos avanzzados de tipos genéricos](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-advanced-generics.html)
+ - [Enlace a los apuntes sobre conceptos avanzados de tipos genéricos](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-advanced-generics.html)
+
+ - [How to Unit Test an Abstract Class - Enterprise Craftsmanship](https://enterprisecraftsmanship.com/posts/how-to-unit-test-an-abstract-class/)
+
+    >TLDR: Test only concrete classes for the code strength.

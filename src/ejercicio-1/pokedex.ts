@@ -1,37 +1,10 @@
-export enum PokemonType {
-  NORMAL,
-  FIRE,
-  WATER,
-  GRASS,
-  POISON,
-  ELECTRIC,
-  ICE,
-  FIGHTING,
-  GROUND,
-  FLYING,
-  PSYCHIC,
-  BUG,
-  ROCK,
-  GHOST,
-  DARK,
-  DRAGON,
-  STEEL,
-  FAIRY,
-}
+type PokemonType = "Normal" | "Fire" | "Water" | "Grass" | "Poison" |
+                   "Electric" | "Ice" | "Fighting" | "Ground" | "Flying" |
+                   "Psychic" | "Bug" | "Rock" | "Ghost" | "Dark" | "Dragon" |
+                   "Steel" | "Fairy";
 
-export type Pokemon = {
-  name: string,
-  weight: number,
-  type: PokemonType,
-  stats: {
-    atk: number,
-    def: number,
-    spd: number,
-    hp: number,
-  };
-};
-
-export class Pokedex {
+/*
+  export class Pokedex {
   pokeList: Pokemon[];
   maxSlots: number;
   constructor(maxSlots: number, inputList?: Pokemon[]) {
@@ -72,3 +45,4 @@ export class Pokedex {
     this.pokeList.push(newPokemon);
   }
 }
+*/
