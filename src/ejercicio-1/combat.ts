@@ -1,4 +1,4 @@
-import { Pokemon, PokemonType } from "./pokedex";
+/* import { Pokemon, PokemonType } from "./pokedex";
 
 
 export class Combat {
@@ -57,45 +57,7 @@ export class Combat {
     }
     return combatLog;
   }
-  private damageCalcule(pk1: Pokemon, pk2: Pokemon): number {
-      let damage: number = 50 * (pk1.stats.atk / pk2.stats.def);
-
-      if (pk1.type == PokemonType.FIRE && pk2.type == PokemonType.GRASS ||
-          pk1.type == PokemonType.FIRE && pk2.type == PokemonType.ICE ||
-          pk1.type == PokemonType.FIRE && pk2.type == PokemonType.BUG ||
-          pk1.type == PokemonType.FIRE && pk2.type == PokemonType.STEEL ||
-          pk1.type == PokemonType.WATER && pk2.type == PokemonType.FIRE ||
-          pk1.type == PokemonType.WATER && pk2.type == PokemonType.ROCK ||
-          pk1.type == PokemonType.WATER && pk2.type == PokemonType.GROUND ||
-          pk1.type == PokemonType.ELECTRIC && pk2.type == PokemonType.WATER ||
-          pk1.type == PokemonType.ELECTRIC && pk2.type == PokemonType.FLYING ||
-          pk1.type == PokemonType.GRASS && pk2.type == PokemonType.WATER ||
-          pk1.type == PokemonType.GRASS && pk2.type == PokemonType.GROUND ||
-          pk1.type == PokemonType.GRASS && pk2.type == PokemonType.ROCK ||
-          pk1.type == PokemonType.PSYCHIC && pk2.type == PokemonType.FIGHTING ||
-          pk1.type == PokemonType.PSYCHIC && pk2.type == PokemonType.GROUND
-          /* some types are not expressed to enshort the method */) {
-        damage = damage * 2;
-      }
-      if (pk2.type == PokemonType.FIRE && pk1.type == PokemonType.GRASS ||
-          pk2.type == PokemonType.FIRE && pk1.type == PokemonType.ICE ||
-          pk2.type == PokemonType.FIRE && pk1.type == PokemonType.BUG ||
-          pk2.type == PokemonType.FIRE && pk1.type == PokemonType.STEEL ||
-          pk2.type == PokemonType.WATER && pk1.type == PokemonType.FIRE ||
-          pk2.type == PokemonType.WATER && pk1.type == PokemonType.ROCK ||
-          pk2.type == PokemonType.WATER && pk1.type == PokemonType.GROUND ||
-          pk2.type == PokemonType.ELECTRIC && pk1.type == PokemonType.WATER ||
-          pk2.type == PokemonType.ELECTRIC && pk1.type == PokemonType.FLYING ||
-          pk2.type == PokemonType.GRASS && pk1.type == PokemonType.WATER ||
-          pk2.type == PokemonType.GRASS && pk1.type == PokemonType.GROUND ||
-          pk2.type == PokemonType.GRASS && pk1.type == PokemonType.ROCK ||
-          pk2.type == PokemonType.PSYCHIC && pk1.type == PokemonType.FIGHTING ||
-          pk2.type == PokemonType.PSYCHIC && pk1.type == PokemonType.GROUND ||
-          pk2.type == pk2.type) {
-        damage = damage * 0.5;
-      }
-
-      return damage;
+  private damageCalcule(): void {
   }
 }
-
+ */

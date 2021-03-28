@@ -5,7 +5,7 @@ export type PokemonType = "Normal" | "Fire" | "Water" | "Grass" | "Poison" |
                            "Flying" |"Psychic" | "Bug" | "Rock" | "Ghost" |
                            "Dark" | "Dragon" | "Steel" | "Fairy";
 
-export class Pokemon extends Fighter {
+export class PokemonFighter extends Fighter {
   constructor(name: string, height: number, weight: number, stats: Stats,
               public readonly element: PokemonType = "Normal") {
     super(name, height, weight, stats);

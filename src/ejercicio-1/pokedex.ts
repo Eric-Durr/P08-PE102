@@ -1,7 +1,6 @@
-type PokemonType = "Normal" | "Fire" | "Water" | "Grass" | "Poison" |
-                   "Electric" | "Ice" | "Fighting" | "Ground" | "Flying" |
-                   "Psychic" | "Bug" | "Rock" | "Ghost" | "Dark" | "Dragon" |
-                   "Steel" | "Fairy";
+// Aplicar SOLID-S: clases PokedexEntry, PokedexEntryPrint y PokedexPrint
+// Utilizar Fighter para generalizar el output.
+
 
 /*
   export class Pokedex {
@@ -37,7 +36,7 @@ type PokemonType = "Normal" | "Fire" | "Water" | "Grass" | "Poison" |
       output = output + `\tAttak: ${pokemon.stats.atk}\n`;
       output = output + `\tDefense: ${pokemon.stats.def}\n`;
       output = output + `\tSpeed: ${pokemon.stats.spd}\n`;
-      output = output + `\tWeight: ${pokemon.weight}\n`; 
+      output = output + `\tWeight: ${pokemon.weight}\n`;
     });
     return output;
   }

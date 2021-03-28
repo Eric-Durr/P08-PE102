@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Combat | pract04</title>
-	<meta name="description" content="Documentation for pract04">
+	<title>Fighter | pract06-solid-principles</title>
+	<meta name="description" content="Documentation for pract06-solid-principles">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 	<script async src="../assets/js/search.js" id="search-script"></script>
@@ -23,7 +23,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">pract04</a>
+					<a href="../index.html" class="title">pract06-solid-principles</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -52,16 +52,16 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../modules.html">pract04</a>
+					<a href="../modules.html">pract06-solid-principles</a>
 				</li>
 				<li>
-					<a href="../modules/combat.html">combat</a>
+					<a href="../modules/fighter.html">fighter</a>
 				</li>
 				<li>
-					<a href="combat.combat-1.html">Combat</a>
+					<a href="fighter.fighter-1.html">Fighter</a>
 				</li>
 			</ul>
-			<h1>Class Combat</h1>
+			<h1>Class Fighter</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,15 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Combat</span>
+						<span class="target">Fighter</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="dragon_ball_fighter.dragonballfighter.html" class="tsd-signature-type" data-tsd-kind="Class">DragonBallFighter</a>
+							</li>
+							<li>
+								<a href="pokemon_fighter.pokemonfighter.html" class="tsd-signature-type" data-tsd-kind="Class">PokemonFighter</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -83,21 +91,22 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="combat.combat-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="fighter.fighter-1.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="combat.combat-1.html#fighter1" class="tsd-kind-icon">fighter1</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="combat.combat-1.html#fighter2" class="tsd-kind-icon">fighter2</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="fighter.fighter-1.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="fighter.fighter-1.html#name" class="tsd-kind-icon">name</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="fighter.fighter-1.html#stats" class="tsd-kind-icon">stats</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="fighter.fighter-1.html#weight" class="tsd-kind-icon">weight</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="combat.combat-1.html#damagecalcule" class="tsd-kind-icon">damage<wbr>Calcule</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="combat.combat-1.html#start" class="tsd-kind-icon">start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="fighter.fighter-1.html#tostring" class="tsd-kind-icon">to<wbr>String</a></li>
 							</ul>
 						</section>
 					</div>
@@ -109,25 +118,31 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Combat<span class="tsd-signature-symbol">(</span>fighter1<span class="tsd-signature-symbol">: </span><a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a>, fighter2<span class="tsd-signature-symbol">: </span><a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="combat.combat-1.html" class="tsd-signature-type" data-tsd-kind="Class">Combat</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Fighter<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, weight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, stats<span class="tsd-signature-symbol">: </span><a href="../modules/fighter.html#stats" class="tsd-signature-type" data-tsd-kind="Type alias">Stats</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="fighter.fighter-1.html" class="tsd-signature-type" data-tsd-kind="Class">Fighter</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in combat.ts:6</li>
+									<li>Defined in fighter.ts:8</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>fighter1: <a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a></h5>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
 								</li>
 								<li>
-									<h5>fighter2: <a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a></h5>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>weight: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>stats: <a href="../modules/fighter.html#stats" class="tsd-signature-type" data-tsd-kind="Type alias">Stats</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="combat.combat-1.html" class="tsd-signature-type" data-tsd-kind="Class">Combat</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="fighter.fighter-1.html" class="tsd-signature-type" data-tsd-kind="Class">Fighter</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -135,65 +150,47 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="fighter1" class="tsd-anchor"></a>
-					<h3>fighter1</h3>
-					<div class="tsd-signature tsd-kind-icon">fighter1<span class="tsd-signature-symbol">:</span> <a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a></div>
+					<a name="height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in combat.ts:5</li>
-						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="fighter2" class="tsd-anchor"></a>
-					<h3>fighter2</h3>
-					<div class="tsd-signature tsd-kind-icon">fighter2<span class="tsd-signature-symbol">:</span> <a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a></div>
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in combat.ts:6</li>
-						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="stats" class="tsd-anchor"></a>
+					<h3>stats</h3>
+					<div class="tsd-signature tsd-kind-icon">stats<span class="tsd-signature-symbol">:</span> <a href="../modules/fighter.html#stats" class="tsd-signature-type" data-tsd-kind="Type alias">Stats</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="weight" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> weight</h3>
+					<div class="tsd-signature tsd-kind-icon">weight<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
 					</aside>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
-					<a name="damagecalcule" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> damage<wbr>Calcule</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
-						<li class="tsd-signature tsd-kind-icon">damage<wbr>Calcule<span class="tsd-signature-symbol">(</span>pk1<span class="tsd-signature-symbol">: </span><a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a>, pk2<span class="tsd-signature-symbol">: </span><a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in combat.ts:60</li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>pk1: <a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a></h5>
-								</li>
-								<li>
-									<h5>pk2: <a href="../modules/pokedex.html#pokemon" class="tsd-signature-type" data-tsd-kind="Type alias">Pokemon</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
-						</li>
-					</ul>
-				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="start" class="tsd-anchor"></a>
-					<h3>start</h3>
+					<a name="tostring" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> to<wbr>String</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+						<li class="tsd-signature tsd-kind-icon">to<wbr>String<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in combat.ts:12</li>
+									<li>Defined in fighter.ts:14</li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
@@ -208,11 +205,17 @@
 					<li class=" ">
 						<a href="../modules.html">Modules</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/dragon_ball_fighter.html">dragon-<wbr>ball-<wbr>fighter</a>
+					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/combat.html">combat</a>
+						<a href="../modules/fighter.html">fighter</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="../modules/pokedex.html">pokedex</a>
+						<a href="../modules/pokemon_fighter.html">pokemon-<wbr>fighter</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/type_effect_calcule.html">type-<wbr>effect-<wbr>calcule</a>
 					</li>
 				</ul>
 			</nav>
@@ -221,27 +224,33 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="combat.combat-1.html" class="tsd-kind-icon">Combat</a>
+						<a href="fighter.fighter-1.html" class="tsd-kind-icon">Fighter</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="combat.combat-1.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="fighter.fighter-1.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="combat.combat-1.html#fighter1" class="tsd-kind-icon">fighter1</a>
+								<a href="fighter.fighter-1.html#height" class="tsd-kind-icon">height</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="combat.combat-1.html#fighter2" class="tsd-kind-icon">fighter2</a>
+								<a href="fighter.fighter-1.html#name" class="tsd-kind-icon">name</a>
 							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
-								<a href="combat.combat-1.html#damagecalcule" class="tsd-kind-icon">damage<wbr>Calcule</a>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="fighter.fighter-1.html#stats" class="tsd-kind-icon">stats</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="fighter.fighter-1.html#weight" class="tsd-kind-icon">weight</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="combat.combat-1.html#start" class="tsd-kind-icon">start</a>
+								<a href="fighter.fighter-1.html#tostring" class="tsd-kind-icon">to<wbr>String</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/fighter.html#stats" class="tsd-kind-icon">Stats</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -259,12 +268,6 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
-			</ul>
-			<ul class="tsd-legend">
-				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
 			</ul>
 		</div>
 	</div>

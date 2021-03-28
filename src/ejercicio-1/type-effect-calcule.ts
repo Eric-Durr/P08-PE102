@@ -1,8 +1,8 @@
-import {PokemonType} from "./pokemon";
+import {PokemonType} from "./pokemon-fighter";
 
 export class TypeEffectCalcule {
   public readonly outputEffect: 0.5 | 2 | 1 | 0
-  constructor(public readonly thisFighterType: PokemonType, 
+  constructor(public readonly thisFighterType: PokemonType,
               public readonly otherFighterType: PokemonType) {
     this.outputEffect = this.comparePokemonTypes();
   }
@@ -66,14 +66,14 @@ export class TypeEffectCalcule {
 
     /* Disadvantages cases */
     if ((this.thisFighterType === this.otherFighterType &&
-        (this.otherFighterType !== "Ghost" &&
-        this.otherFighterType !== "Fighting" &&
-        this.otherFighterType !== "Normal" &&
-        this.otherFighterType !== "Ground" &&
-        this.otherFighterType !== "Flying" &&
-        this.otherFighterType !== "Bug" &&
-        this.otherFighterType !== "Rock" &&
-        this.otherFighterType !== "Fairy")) ||
+      (this.otherFighterType !== "Ghost" &&
+      this.otherFighterType !== "Fighting" &&
+      this.otherFighterType !== "Normal" &&
+      this.otherFighterType !== "Ground" &&
+      this.otherFighterType !== "Flying" &&
+      this.otherFighterType !== "Bug" &&
+      this.otherFighterType !== "Rock" &&
+      this.otherFighterType !== "Fairy")) ||
       this.thisFighterType === "Normal" && this.otherFighterType === "Rock" ||
       this.thisFighterType === "Normal" && this.otherFighterType === "Steel" ||
       this.thisFighterType === "Fire" && this.otherFighterType === "Water" ||
@@ -138,14 +138,15 @@ export class TypeEffectCalcule {
       return 0.5;
     }
     /* No effect cases */
-    if (this.thisFighterType === "Normal" && this.otherFighterType == "Ghost" ||
-    this.thisFighterType === "Electric" && this.otherFighterType == "Ground" ||
-    this.thisFighterType === "Fighting" && this.otherFighterType == "Ghost" ||
-    this.thisFighterType === "Poison" && this.otherFighterType == "Steel" ||
-    this.thisFighterType === "Ground" && this.otherFighterType == "Flying" ||
-    this.thisFighterType === "Psychic" && this.otherFighterType == "Dark" ||
-    this.thisFighterType === "Ghost" && this.otherFighterType == "Normal" ||
-    this.thisFighterType === "Dragon" && this.otherFighterType == "Fairy") {
+    if (this.thisFighterType === "Normal" &&
+        this.otherFighterType === "Ghost" ||
+    this.thisFighterType === "Electric" && this.otherFighterType === "Ground" ||
+    this.thisFighterType === "Fighting" && this.otherFighterType === "Ghost" ||
+    this.thisFighterType === "Poison" && this.otherFighterType === "Steel" ||
+    this.thisFighterType === "Ground" && this.otherFighterType === "Flying" ||
+    this.thisFighterType === "Psychic" && this.otherFighterType === "Dark" ||
+    this.thisFighterType === "Ghost" && this.otherFighterType === "Normal" ||
+    this.thisFighterType === "Dragon" && this.otherFighterType === "Fairy") {
       return 0;
     }
     return 1;
