@@ -10,7 +10,7 @@
 
 **~$ npm run test**
 
-> Ejecuta los test definidos y su correspondiente código fuente
+> Ejecuta los test definidos y compila su correspondiente código fuente, además de generar el informe de cubrimiento.
 
 **~$ npm run watch**
 
@@ -25,7 +25,7 @@
 **~$ npm run doc**
 
 > Genera documentación en base a los comentarios de cada fichero fuente mediante la herramienta [TypeDoc](https://typedoc.org/)
-## Enlaces  
+## Referencias  
  - [Enlace al enunciado de la práctica](https://ull-esit-inf-dsi-2021.github.io/prct06-generics-solid/)  
  - [Enlace a los apuntes sobre principios SOLID](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-solid.html)  
  - [Enlace a los apuntes sobre conceptos avanzados de tipos genéricos](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-advanced-generics.html)

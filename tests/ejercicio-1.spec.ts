@@ -4,6 +4,7 @@ import {Stats} from "../src/ejercicio-1/fighter";
 import {TypeEffectCalcule} from "../src/ejercicio-1/type-effect-calcule";
 import {PokemonFighter} from "../src/ejercicio-1/pokemon-fighter";
 import {DragonBallFighter} from "../src/ejercicio-1/dragon-ball-fighter";
+import {PokedexEntry} from "../src/ejercicio-1/pokedex-entry";
 
 describe("Type effect calcule in combat is nested in another class - Ex1", ()=>{
   it("When advantage input class sets as 2", ()=>{
@@ -135,5 +136,36 @@ describe("Testing concrete class DragonBallFighter from Fighter - Ex1", () => {
     .eq("Name: Pedro\nHeight: 1.75 m\nWeight: 72 Kg\n"+"Gender: Male\n"+
         "Stats:\n\tAttak: 60\n\tDeffense: 80\n\tSpeed: 10\n\tHP: 120\n"+
         "Race: Human\nPower Level: 1");
+  });
+});
+
+describe("Poxedex entry class tests - Ex1", ()=>{
+  const vegetaStats: Stats = {
+    atk: 60,
+    def: 80,
+    spd: 10,
+    hp: 120};
+
+  const vegeta =
+  new DragonBallFighter("Vegeta", 1.64, 56, "Male",
+                        vegetaStats, "Saiyan", 18000);
+  const elekidStats: Stats = {
+    atk: 60,
+    def: 80,
+    spd: 10,
+    hp: 80};
+
+  const elekid =
+    new PokemonFighter("Elekid", 0.4, 50, "Female", elekidStats, "Electric");
+
+  it("Creating a pokemon entry returns an object with all its features", ()=>{
+    const myFirstPokemonEntry = new PokedexEntry(elekid);
+    expect(myFirstPokemonEntry.entry)
+        .to.be.eq("Elekid | H: 0.4m | W: 50kg | G: ♀");
+  });
+  it("Creating a DB entry returns an object with all its features", ()=>{
+    const mySecondPokemonEntry = new PokedexEntry(vegeta);
+    expect(mySecondPokemonEntry.entry)
+        .to.be.eq("Vegeta | H: 1.64m | W: 56kg | G: ♂");
   });
 });
