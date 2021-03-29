@@ -6,14 +6,16 @@ export type PokemonType = "Normal" | "Fire" | "Water" | "Grass" | "Poison" |
                            "Dark" | "Dragon" | "Steel" | "Fairy";
 
 export class PokemonFighter extends Fighter {
-  constructor(name: string, height: number, weight: number, stats: Stats,
+  constructor(name: string, height: number, weight: number,
+              gender: "Male" | "Female", stats: Stats,
               public readonly element: PokemonType = "Normal") {
-    super(name, height, weight, stats);
+    super(name, height, weight, gender, stats);
   }
   toString() {
     return `Name: ${this.name}\nHeight: ${this.height} m`+
-           `\nWeight: ${this.weight} Kg\n`+
-           `Stats:\n\tAttak: ${this.stats.atk}`+
+           `\nWeight: ${this.weight} Kg`+
+           `\nGender: ${this.gender}`+
+           `\nStats:\n\tAttak: ${this.stats.atk}`+
            `\n\tDeffense: ${this.stats.def}`+
            `\n\tSpeed: ${this.stats.spd}`+
            `\n\tHP: ${this.stats.hp}\n`+
