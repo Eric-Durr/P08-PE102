@@ -1,47 +1,82 @@
-// Aplicar SOLID-S: clases PokedexEntry, PokedexEntryPrint y PokedexPrint
-// Utilizar Fighter para generalizar el output.
+import {PokedexEntry} from "./pokedex-entry";
 
-
-/*
-  export class Pokedex {
-  pokeList: Pokemon[];
-  maxSlots: number;
-  constructor(maxSlots: number, inputList?: Pokemon[]) {
-    this.maxSlots = maxSlots;
-     if (typeof inputList === "undefined") {
-      this.pokeList = [];
+export class Pokedex {
+elements: Set<PokedexEntry> ;
+maxSlots: number;
+knownFighters: number;
+unknownFighters: number;
+constructor(maxSlots: number = 0, ...elements: PokedexEntry[]) {
+  this.maxSlots = maxSlots;
+    if (elements.length === 0) {
+      this.elements = new Set;
     } else {
-      this.pokeList = inputList;
+      this.elements = new Set(elements);
+    }
+    this.knownFighters = elements.length;
+    this.unknownFighters = this.maxSlots - elements.length;
+  }
+  upgradeSlots(increment: number): void {
+    this.maxSlots = this.maxSlots + increment;
+    this.unknownFighters = this.maxSlots - this.knownFighters;
+  }
+
+  getFighter(name: string): PokedexEntry | undefined {
+    return [...this.elements.values()]
+        .find((entry) =>entry.instance.name === name);
+  }
+
+  scanFighters(...newEntries: PokedexEntry[]): boolean {
+    if ((this.knownFighters + newEntries.length) <= this.maxSlots) {
+      const before: number = this.knownFighters;
+        newEntries.forEach((entry)=> {
+          const fighter: PokedexEntry | undefined =
+              this.getFighter(entry.instance.name);
+          if (typeof fighter === "undefined") {
+            this.elements.add(entry);
+            this.knownFighters ++;
+            this.unknownFighters --;
+          }
+        });
+        console.log(this.elements.size);
+        return before !== this.knownFighters;
+    } else {
+      return false;
     }
   }
-  knownPokemon(): number {
-    return this.pokeList.length;
+  removeFighter(name: string): boolean {
+    const fighter: PokedexEntry | undefined = this.getFighter(name);
+    if (typeof fighter !== "undefined") {
+      const before: number = this.knownFighters;
+      this.elements.delete(fighter);
+      this.knownFighters = this.elements.size;
+      this.unknownFighters ++;
+      return this.knownFighters !== before;
+    } else {
+      return false;
+    }
   }
-  unknownPokemon(): number {
-    return this.maxSlots - this.pokeList.length;
-  }
-  totalSlots(): number {
-    return this.maxSlots;
-  }
-  toString(): string {
-    return this.pokeList.length === 0 ?
-    "--no known pokemon yet--" :
-    this.listToString();
-  }
+}
+
+export class PokedexOutput {
+  constructor(public readonly pokedex: Pokedex) {}
+  print(): string {
+    let output: string = "\n==== POKEDEX STATUS OUTPUT ====\n";
+      output = output +
+               `SLOTS: ${this.pokedex.knownFighters}/${this.pokedex.maxSlots}`+
+               ` -- ${this.pokedex.unknownFighters} free spaces\n`;
+      this.pokedex.elements.size === 0 ?
+        output = output + "--no registered fighters yet--\n" :
+        output = output + this.listToString();
+      return output;
+    }
   private listToString(): string {
     let output = "";
-    this.pokeList.forEach((pokemon, i)=> {
-      output = output + `${i+1}--${pokemon.name}\n`;
-      output = output + `\tHP: ${pokemon.stats.hp}\n`;
-      output = output + `\tAttak: ${pokemon.stats.atk}\n`;
-      output = output + `\tDefense: ${pokemon.stats.def}\n`;
-      output = output + `\tSpeed: ${pokemon.stats.spd}\n`;
-      output = output + `\tWeight: ${pokemon.weight}\n`;
+    let i = 1;
+    this.pokedex.elements.forEach((fighter)=> {
+      output = output + `\t${i} | ` + fighter.entry + "\n";
+      i++;
     });
     return output;
   }
-  scanPokemon(newPokemon: Pokemon): void {
-    this.pokeList.push(newPokemon);
-  }
 }
-*/
+

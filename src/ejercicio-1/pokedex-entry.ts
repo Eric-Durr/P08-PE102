@@ -2,10 +2,11 @@ import {Fighter} from "./fighter";
 
 export class PokedexEntry {
   public readonly entry: string;
-  constructor(intro: Fighter) {
-    this.entry = `${intro.name} |`+
-                 ` H: ${intro.height}m |`+
-                 ` W: ${intro.weight}kg |`+
-                 ` G: `+ (intro.gender === "Male" ? `♂` : `♀`);
+  constructor(public readonly instance: Fighter) {
+    this.entry =`${instance.constructor.name.split(/(?=[A-Z])/).join(" ")} |`+
+                ` ${instance.name} |`+
+                ` H: ${instance.height}m |`+
+                ` W: ${instance.weight}kg |`+
+                ` G: `+ (instance.gender === "Male" ? `♂` : `♀`);
   }
 }
