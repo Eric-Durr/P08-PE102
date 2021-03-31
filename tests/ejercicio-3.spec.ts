@@ -1,6 +1,9 @@
 import "mocha";
 import { expect } from "chai";
-// import {} from "../src/ejercicio-3/...";
+import {FilmsStreamableCollection,
+        ShowsStreamableCollection,
+        DocumentaryStreamableCollection}
+    from "../src/ejercicio-3/streamable-collections";
 
 describe("argument", () => {
   it("", () => {
