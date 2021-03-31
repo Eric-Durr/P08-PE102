@@ -29,37 +29,7 @@ export class DamageCalcule {
   private dbDamage(attacker: DragonBallFighter,
                    defender: DragonBallFighter): number {
     let damage: number = 0;
-    damage = attacker.pl/defender.pl * (attacker.stats.atk/defender.stats.def);
-    if (attacker.race === "Human" && defender.race !== "Human") {
-      damage = damage / 2;
-    }
-    if (attacker.race === "Saiyan" && defender.race === "Human") {
-      damage = damage * 3;
-    }
-    if (attacker.race === "Saiyan" && defender.race === "Android") {
-      damage = damage * 2;
-    }
-    if (attacker.race === "Saiyan" && defender.race === "Other") {
-      damage = damage * 1.5;
-    }
-    if (attacker.race === "Android" && defender.race === "Saiyan") {
-      damage = damage / 1.5;
-    }
-    if (attacker.race === "Android" && defender.race === "Other") {
-      damage = damage / 1.2;
-    }
-    if (attacker.race === "Android" && defender.race === "Human") {
-      damage = damage * 1.5;
-    }
-    if (attacker.race === "Other" && defender.race === "Saiyan") {
-      damage = damage / 1.5;
-    }
-    if (attacker.race === "Other" && defender.race === "Android") {
-      damage = damage * 1.2;
-    }
-    if (attacker.race === "Other" && defender.race === "Human") {
-      damage = damage * 2;
-    }
+    damage = attacker.pl/defender.pl + (attacker.stats.atk/defender.stats.def);
     return damage;
   }
 
@@ -67,11 +37,11 @@ export class DamageCalcule {
     if (attacker.constructor.name === "PokemonFighter" &&
         defender.constructor.name === "DragonBallFighter") {
           return (attacker.stats.atk/defender.stats.def) / 2;
-    }
-    if (defender.constructor.name === "PokemonFighter" &&
+    } else if (defender.constructor.name === "PokemonFighter" &&
         attacker.constructor.name === "DragonBallFighter") {
       return (attacker.stats.atk/defender.stats.def) * 1.5;
+    } else {
+      return (attacker.stats.atk/defender.stats.def);
     }
-    return (attacker.stats.atk/defender.stats.def);
   }
 }
