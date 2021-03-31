@@ -58,6 +58,8 @@ export class Combat {
     return combatLog;
   }
   private damageCalcule(): void {
+    let damage: number = 50 * (pk1.stats.atk / pk2.stats.def);
+
   }
 }
  */

@@ -37,7 +37,6 @@ constructor(maxSlots: number = 0, ...elements: PokedexEntry[]) {
             this.unknownFighters --;
           }
         });
-        console.log(this.elements.size);
         return before !== this.knownFighters;
     } else {
       return false;

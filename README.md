@@ -31,5 +31,9 @@
  - [Enlace a los apuntes sobre conceptos avanzados de tipos genéricos](https://ull-esit-inf-dsi-2021.github.io/typescript-theory/typescript-advanced-generics.html)
 
  - [How to Unit Test an Abstract Class - Enterprise Craftsmanship](https://enterprisecraftsmanship.com/posts/how-to-unit-test-an-abstract-class/)
-
     >TLDR: Test only concrete classes for the code strength.
+
+ - [Pokemon type effect chart - pokemondb.net](https://pokemondb.net/type)
+
+ - [Dragon ball information source 1 - dragonball.fandom.com](https://dragonball.fandom.com/)
+ - [Dragon ball information source 2 - dragonball guru](https://dragonball.guru/)
