@@ -1,6 +1,24 @@
 import {Fighter} from "./fighter";
 import {DamageCalcule} from "./damage-calcule";
 
+/**
+ * ## Clase combat
+ *
+ * Hace uso de la clase abstracta Fighter para poder
+ * emplear cualquier clase deerivada de estos, además,
+ * en el contructor, recibe un array de frases para el combate
+ *
+ * El método start() genera una cadena de caracteres donde se
+ * expone el registro del combate y hace uso de la clase DamageCalcule
+ * que hace de interfaz de cálculo de daño.
+ *
+ * Internamente la clase DamageCalcule
+ * detecta qué tipo de combbate se disputa en base a los
+ * luchadores proporcionados.
+ *
+ * Se llama al metodo getRandomPhrase para hacer que el luchador
+ * diga una de sus frases para el combate.
+ */
 
 export class Combat {
   public readonly fighter1: {
@@ -43,7 +61,7 @@ export class Combat {
         combatLog =
         combatLog +
         `\n${this.fighter1.instance.name} says: `+
-        `${this.privateGetRandomPhrase(1)} \n\n`+
+        `${this.getRandomPhrase(1)} \n\n`+
         `\n${this.fighter1.instance.name} attacks`+
         ` ${this.fighter2.instance.name}...\n` +
         `\n\t${this.fighter1.instance.name} dealed `+
@@ -62,7 +80,7 @@ export class Combat {
             combatLog =
             combatLog +
             `\n${this.fighter2.instance.name} says: `+
-            `${this.privateGetRandomPhrase(2)} \n\n`+
+            `${this.getRandomPhrase(2)} \n\n`+
             `\n${this.fighter2.instance.name} attacks`+
             ` ${this.fighter1.instance.name}...\n` +
             `\n\t${this.fighter2.instance.name} dealed `+
@@ -81,7 +99,7 @@ export class Combat {
     return combatLog;
   }
 
-  privateGetRandomPhrase(fighter: 1 | 2): string {
+  private getRandomPhrase(fighter: 1 | 2): string {
     return fighter === 1 ?
       this.fighter1.phrases[Math.floor(Math.random() *
                            this.fighter1.phrases.length)] :

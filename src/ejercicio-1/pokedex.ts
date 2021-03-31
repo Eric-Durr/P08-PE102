@@ -1,5 +1,23 @@
 import {PokedexEntry} from "./pokedex-entry";
 
+
+/**
+ * # Clase Pokedex
+ *
+ * La clase pokedex se define por una lista de objetos de tipo PopkedexEntry
+ * y a su vez el número máximo de casillas que tiene para completar con
+ * luchadores. También se usan atributos para expresar los ya conocidos y el
+ * número restante de casillas.
+ *
+ * Cabe destacar que se emplea un tipo Set para contener todas las entradas de
+ * la Pokedex, ya que se supone que todos son únicos. Los métodos también se
+ * han deesarrollado para satisfacer esta condición.
+ *
+ * Esta clase, como viene siendo habitual permite el escaneo dee nuevos
+ * luchadores así como su borrado, afectando esto a los huecos libres y
+ * ocupados.
+ */
+
 export class Pokedex {
 elements: Set<PokedexEntry> ;
 maxSlots: number;
@@ -56,6 +74,13 @@ constructor(maxSlots: number = 0, ...elements: PokedexEntry[]) {
   }
 }
 
+/**
+ * ## Clasee de impresión de la pokedex
+ * Esta clase surge del principio SOLID de Single responsibility,
+ * se encarga de generar una cadena de caracteres a partir de la pokedex,
+ * dentro se añade a la salida de todas las entradas; el universo de origen
+ * y el estado de huecos de la pokedex
+ */
 export class PokedexOutput {
   constructor(public readonly pokedex: Pokedex) {}
   print(): string {

@@ -5,7 +5,7 @@ type Categories = "Horror" | "Comedy" | "Drama" |
                  "Fantasy" | "Historical" | "Crime";
 
 interface Searchable {
-  searchByCategory(category: Categories): string[];
+  // searchByCategory(category: Categories): string[];
   searchByWord(name: string): string[];
 }
 

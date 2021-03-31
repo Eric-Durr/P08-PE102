@@ -5,6 +5,13 @@ export type PokemonType = "Normal" | "Fire" | "Water" | "Grass" | "Poison" |
                            "Flying" |"Psychic" | "Bug" | "Rock" | "Ghost" |
                            "Dark" | "Dragon" | "Steel" | "Fairy";
 
+/**
+ * ## Clase PokemonFighter
+ * Es una especificación de la clase abstracta Fighter y,
+ * a parte de los atributos base, especifica el atributo element
+ * que no es otra cosa que el tipo de pokemon, esto se usa al resolver
+ * el daño de combate.
+ */
 export class PokemonFighter extends Fighter {
   constructor(name: string, height: number, weight: number,
               gender: "Male" | "Female", stats: Stats,

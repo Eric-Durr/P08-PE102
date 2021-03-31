@@ -1,5 +1,13 @@
 import {PokemonType} from "./pokemon-fighter";
 
+/**
+ * ## Clase para el cálculo del efecto de los tipos de pokemon
+ * Esta clase también surge del principio SOLID de Single responsibility
+ * y se encarga de calcular la relación de modificación de la formula del
+ * daño resultante en base a los elementos del atacante y el defensor.
+ *
+ * El efecto de salida solo puede tomar los valores 0.5, 2 ,1 y 0
+ */
 export class TypeEffectCalcule {
   public readonly outputEffect: 0.5 | 2 | 1 | 0
   constructor(public readonly thisFighterType: PokemonType,

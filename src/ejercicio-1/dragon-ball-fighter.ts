@@ -4,11 +4,17 @@ import {Fighter, Stats} from "./fighter";
 export type RaceType = "Human" | "Other" /* all non human but biological */ |
                        "Android" | "Saiyan";
 
-/* Features
-  - Fighter race (Human, Saiyan, Namekian, ...)
-  - Fighter PowerLevel
-*/
-
+/**
+ * ## Clase DragonBallFighter
+ * Es una especificación de la clase abstracta Fighter y,
+ * a parte de los atributos base, especifica los atributos:
+ * - race: Para especificar el origen del luchador
+ * - pl: Para especificar el nivel de poder
+ *
+ * A parte de la implementación del metodo toString
+ * también se crea un método para subir de nivel como es
+ * típico en este universo.
+ */
 export class DragonBallFighter extends Fighter {
   constructor(name: string, height: number, weight: number,
               gender: "Male" | "Female", stats: Stats,
