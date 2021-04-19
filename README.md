@@ -21,7 +21,12 @@
 4. Analice la calidad y seguridad del código fuente desarrollado mediante Sonar Cloud gracias a la implementación de un flujo de trabajo de GitHub Actions que se dispare con cada push llevado a cabo con su repositorio.
 
 5. Por último, recuerde que deberá incluir la documentación de su proyecto haciendo uso de TypeDoc.
+
+
+
 Como entrega de esta tarea deberá indicar el enlace al repositorio GitHub con los ejercicios de evaluación solicitados.
+
+#
 
 [![PE102 - P8 TypeScript Tests](https://github.com/Eric-Durr/P08-PE102/actions/workflows/tests.yml/badge.svg)](https://github.com/Eric-Durr/P08-PE102/actions/workflows/tests.yml)
 [![PE102 - P8 code  coverage](https://github.com/Eric-Durr/P08-PE102/actions/workflows/coveralls.yml/badge.svg)](https://github.com/Eric-Durr/P08-PE102/actions/workflows/coveralls.yml)
