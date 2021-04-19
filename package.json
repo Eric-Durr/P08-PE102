@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "build": "tsc ",
-    "coverage": "nyc npm run tests && nyc report --reporter=lcov",
+    "coverage": "nyc npm test && nyc report --reporter=lcov",
     "start": "tsc && node dist/comand.js",
     "watch": "mocha --watch",
     "doc": "typedoc; touch ./docs/.nojekyll"
