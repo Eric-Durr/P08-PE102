@@ -30,4 +30,4 @@ Como entrega de esta tarea deberá indicar el enlace al repositorio GitHub con l
 
 [![PE102 - P8 TypeScript Tests](https://github.com/Eric-Durr/P08-PE102/actions/workflows/tests.yml/badge.svg)](https://github.com/Eric-Durr/P08-PE102/actions/workflows/tests.yml)
 [![PE102 - P8 code  coverage](https://github.com/Eric-Durr/P08-PE102/actions/workflows/coveralls.yml/badge.svg)](https://github.com/Eric-Durr/P08-PE102/actions/workflows/coveralls.yml)
-
+[![PE102 - P8  Sonar-Cloud Analysis](https://github.com/Eric-Durr/P08-PE102/actions/workflows/sonar-cloud.yml/badge.svg)](https://github.com/Eric-Durr/P08-PE102/actions/workflows/sonar-cloud.yml)[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Eric-Durr_P08-PE102&metric=alert_status)](https://sonarcloud.io/dashboard?id=Eric-Durr_P08-PE102)
